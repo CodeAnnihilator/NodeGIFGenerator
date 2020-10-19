@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "gifencoder": "^2.0.1",
+    "png-js": "^1.0.0",
+    "puppeteer": "^5.3.1"
+  }
+}
