@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './template.module.scss';
+// import styles from './template.module.scss';
 
 const Template = () => {
 	return (

@@ -55,29 +55,29 @@ const Card = ({
 			</div>
 			<div className={styles.buttonsContainer}>
 				<div className={styles.buttonFootage}>
-					<img className={styles.buttonImage} src={filmStripImg} />
+					<img alt='' className={styles.buttonImage} src={filmStripImg} />
 					<div>footage</div>
 				</div>
 				<div className={styles.buttonExplore}>
-					<img className={styles.buttonImage} src={selectionImg} />
+					<img alt='' className={styles.buttonImage} src={selectionImg} />
 					<div>explore</div>
 				</div>
 			</div>
 			<div className={styles.statsContainer}>
 				<div className={styles.iconContainer}>
-					<img className={styles.icon} src={viewImg} />
+					<img alt='' className={styles.icon} src={viewImg} />
 					<div className={styles.iconText}>587</div>
 				</div>
 				<div className={styles.iconContainer}>
-					<img className={styles.icon} src={commentImg} />
+					<img alt='' className={styles.icon} src={commentImg} />
 					<div className={styles.iconText}>15</div>
 				</div>
 				<div className={styles.iconContainer}>
-					<img className={styles.icon} src={starImg} />
+					<img alt='' className={styles.icon} src={starImg} />
 					<div className={styles.iconText}>209</div>
 				</div>
 				<div className={styles.iconContainer}>
-					<img className={styles.icon} src={priceTagImg} />
+					<img alt='' className={styles.icon} src={priceTagImg} />
 					<div className={styles.iconText}>$0.15</div>
 				</div>
 			</div>
@@ -91,7 +91,7 @@ const Card = ({
 const Header = () => (
 	<div className={styles.headerContainer}>
 		<div className={styles.logoContainer}>
-			<img className={styles.logo} src={gifImg} />
+			<img alt='' className={styles.logo} src={gifImg} />
 			<div>
 				<span className={styles.logoText}>gif</span>
 				<span>station</span>
@@ -103,8 +103,8 @@ const Header = () => (
 
 const Footage = () => (
 	<div className={styles.filmStripContainer}>
-		<img src='https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/319/319970/butterfly-on-red-flower.jpg?w=1155&h=1541' className={styles.filmStripEl}/>
-		<img src='https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/319/319970/butterfly-on-red-flower.jpg?w=1155&h=1541' className={styles.filmStripEl}/>
+		<img alt='' src='https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/319/319970/butterfly-on-red-flower.jpg?w=1155&h=1541' className={styles.filmStripEl}/>
+		<img alt='' src='https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/319/319970/butterfly-on-red-flower.jpg?w=1155&h=1541' className={styles.filmStripEl}/>
 		<div className={styles.nextFootageEl} />
 		<div className={styles.nextFootageEl} />
 		<div className={styles.nextFootageEl} />

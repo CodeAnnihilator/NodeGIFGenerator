@@ -1,10 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-// import styles from './sample.module.scss';
+import IFrame from 'Components/IFrame';
+import RenderField from 'Components/RenderFields/RenderField';
+
+import config from 'template/config';
 
 const Sample = () => {
+
+	const [iframe, setIframe] = useState(null as HTMLIFrameElement | null);
+
+	const handleChange = (field: any) => (event: any) => {
+		console.log(event.target.value)
+		iframe?.contentWindow?.postMessage({...field, value: event.target.value}, '*');
+	};
+
+	useEffect(() => {
+		const iframe = document.getElementById('iframe') as HTMLIFrameElement;
+		iframe.addEventListener('load', () => setIframe(iframe));
+	}, [])
+
 	return (
-		<div>sample</div>
+		<div>
+			{
+				iframe && config.fields.map(field => (
+					<RenderField
+						key={field.id}
+						field={field}
+						onChange={handleChange(field)}
+					/>
+				))
+			}
+			<IFrame />
+		</div>
 	)
 }
 
