@@ -1,19 +1,21 @@
 .container {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
   
   .card {
-	width: calc(20% - 6px);
-	min-width: 250px;
-	height: 250px;
-	display: flex;
-	overflow: hidden;
-	position: relative;
-	margin: 3px;
-	border-radius: 8px;
+    height: 300px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px 5px rgba(0,0,0,0.25);
 	&:hover {
 	  cursor: pointer;
+	  transform: scale(1.1);
+      z-index: 1;
 	  & .textOverlay {
 		display: flex;
 	  }
@@ -103,33 +105,40 @@
   }
   
   .cardsContainer {
-	display: flex;
-	flex-wrap: wrap;
+    flex: 1;
+    align-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(330px, 1fr));
+    margin: 20px;
   }
   
   .headerContainer {
-	display: flex;
-	height: 70px;
-	background-color: rgba(66,66,66,0.95);
-	position: sticky;
-	top: 0;
-	color: #949494;
+    display: flex;
+    height: 70px;
+    background-color: rgb(36,33,37);
+    position: sticky;
+    top: 0;
+    color: #949494;
 	z-index: 1;
-	flex: 1 1;
+	padding: 0 40px;
   }
   
   .logo {
 	width: 40px;
 	height: 40px;
-	margin: 0 15px;
+	font-size: 0.9em;
+	margin-right: 20px;
   }
   
   @keyframes rotation {
-	from {
-	  transform: rotate(0deg);
+	0% {
+	  transform: rotate(0deg) scale(1);
 	}
-	to {
-	  transform: rotate(359deg);
+	50% {
+		transform: rotate(180deg) scale(0.9);
+	}
+	100% {
+	  transform: rotate(359deg) scale(1);
 	}
   }
   
@@ -141,7 +150,7 @@
 	font-weight: bold;
 	cursor: pointer;
 	&:hover .logo {
-	  animation: rotation 1s infinite linear;
+	  animation: rotation 1s infinite cubic-bezier(0.8, -0.4, 0.1, 0.1);
 	}
   }
   

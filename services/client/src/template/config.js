@@ -59,6 +59,6 @@ export default {
 			value: '',
 			placeholder: 'place image link here...',
 			label: 'bg image',
-		},
+		}
 	]
 }

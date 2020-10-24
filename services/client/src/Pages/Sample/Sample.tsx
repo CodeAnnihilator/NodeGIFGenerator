@@ -10,8 +10,8 @@ const Sample = () => {
 	const [iframe, setIframe] = useState(null as HTMLIFrameElement | null);
 
 	const handleChange = (field: any) => (event: any) => {
-		console.log(event.target.value)
-		iframe?.contentWindow?.postMessage({...field, value: event.target.value}, '*');
+		const { value } = event.target;
+		iframe?.contentWindow?.postMessage({...field, value}, '*');
 	};
 
 	useEffect(() => {

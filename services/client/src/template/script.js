@@ -28,27 +28,5 @@ export default `
 	}, false); // --> receive message from parent
 
 	// window.top.postMessage(JSON.stringify('RRRRRR'), '*'); // --> send message to parent
+
 `;
-
-
-
-
-
-
-
-
-
-// const gs1_name = document.getElementById('gs1_name');
-
-// gs1_name.addEventListener('change', (event) => {
-// 	const gs1_result = document.getElementById('gs1_result');
-// 	gs1_result.style.backgroundImage = 'url(' + event.target.value + ')';
-// })
-
-// const gs2_options = document.getElementById('gs2_options');
-// gs2_options.addEventListener('change', (event) => {
-// 	const value = event.target.value;
-// 	!value.length
-// 		? movingText.classList.remove('pulse')
-// 		: movingText.classList.add('pulse')
-// });
