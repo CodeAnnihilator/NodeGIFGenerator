@@ -5,6 +5,8 @@ import css from 'template/css';
 import script from 'template/script';
 import store from 'template/store';
 
+import styles from './iFrame.module.scss';
+
 const srcDoc = `
 	<html>
 		<body>${html}</body>
@@ -14,7 +16,7 @@ const srcDoc = `
 	</html>
 `;
 
-const IFrame = () => {
+const IFrame = ({ dimensions }: any) => {
 
 	useEffect(() => {
 
@@ -34,15 +36,17 @@ const IFrame = () => {
 	}, [])
 
 	return (
-		<iframe
-			id='iframe'
-			srcDoc={srcDoc}
-			title='output'
-			sandbox='allow-scripts'
-			frameBorder='0'
-			width='100%'
-			height='100%'
-		/>
+		<div style={dimensions} className={styles.container}>
+			<iframe
+				id='iframe'
+				srcDoc={srcDoc}
+				title='output'
+				sandbox='allow-scripts'
+				frameBorder='0'
+				width='100%'
+				height='100%'
+			/>
+		</div>
 	)
 }
 

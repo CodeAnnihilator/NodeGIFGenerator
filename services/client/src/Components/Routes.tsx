@@ -7,8 +7,11 @@ import Samples from 'Pages/Samples';
 import Sample from 'Pages/Sample';
 import Profile from 'Pages/Profile';
 
+import Header from 'Components/Header';
+
 const Routes = () => (
 	<Router>
+		<Header />
 		<Switch>
 			<Route exact path='/samples' component={Samples} />
 			<Route exact path='/samples/:sampleId' component={Sample} />

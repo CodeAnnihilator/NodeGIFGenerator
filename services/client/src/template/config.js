@@ -1,10 +1,12 @@
 export default {
+	width: '800',
+	height: '800',
 	fields: [
 		{
 			id: 'movingTextInput',
 			identity: 'input',
 			type: 'text',
-			value: '',
+			defaultValue: '',
 			placeholder: 'enter your text here...',
 			label: 'moving text',
 		},
@@ -12,7 +14,7 @@ export default {
 			id: 'movingTextAnimationDirection',
 			identity: 'select',
 			label: 'animation direction',
-			value: '',
+			defaultValue: '',
 			options: [
 				{
 					value: '',
@@ -40,7 +42,7 @@ export default {
 			id: 'toggleTextPulsing',
 			identity: 'select',
 			label: 'toggle text pulsing',
-			value: '',
+			defaultValue: '',
 			options: [
 				{
 					value: '',
@@ -56,9 +58,25 @@ export default {
 			id: 'bgImage',
 			identity: 'input',
 			type: 'text',
-			value: '',
+			defaultValue: '',
 			placeholder: 'place image link here...',
 			label: 'bg image',
-		}
+		},
+		{
+			id: 'bgGradient',
+			identity: 'select',
+			label: 'toggle gradient animation',
+			defaultValue: '',
+			options: [
+				{
+					value: '',
+					text: 'no gradient'
+				},
+				{
+					value: 'bg_gradient',
+					text: 'gradient'
+				}
+			]
+		},
 	]
 }

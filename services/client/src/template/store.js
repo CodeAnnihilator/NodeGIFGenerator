@@ -1,13 +1,10 @@
 export default `
-
-	const interceptor = {
-		set: function(target, prop, val, receiver) {
-			return Reflect.set(target, prop, val, receiver);
-		},
-		get: function(target, prop, receiver) {
-			return Reflect.get(target, prop, receiver);
-		},
-	}
-
-	var store = new Proxy({}, interceptor);
+	window.addEventListener("message", ({data}) => {
+		if (data === 'create_gif') {
+			const documentCopy = document.body.cloneNode(true);
+			const scripts = documentCopy.getElementsByTagName('script');
+			console.log(scripts.length)
+			console.log(documentCopy)
+		}
+	}, false); // --> receive message from parent
 `
